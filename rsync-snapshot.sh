@@ -20,7 +20,7 @@ mkdir -p "${BACKUP_DIR}"
 rsync -av --delete \
   "${SOURCE_DIR}/" \
   --link-dest "${LATEST_LINK}" \
-  --exclude={"/swap.img","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/*","/lost+found","/srv/nextcloud/data/appdata_ocpg7fho3f71/preview/*","/srv/nextcloud/data/Amaury/*","/srv/nextcloud/data/Natacha/*"} \
+  --exclude={"/swap.img","/swapfile","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/*","/lost+found","/srv/nextcloud/data/appdata_ocpg7fho3f71/preview/*","/srv/nextcloud/data/Amaury/*","/srv/nextcloud/data/Natacha/*"} \
   "${BACKUP_PATH}"
 
 rm -rf "${LATEST_LINK}"
