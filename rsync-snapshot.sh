@@ -4,8 +4,8 @@
 #   Amaury Libert <amaury-libert@hotmail.com> de Blabla Linux <https://blablalinux.be>
 #
 # Description:
-#   A script to perform full incremental backups of a server using rsync - Here for a Nextcloud Dedicated Server   
-#   Un script pour effectuer des sauvegardes incrémentielles complètes d'un serveur à l'aide de rsync - Ici pour un serveur dédié Nextcloud
+#   A script to perform full incremental backups of a server using rsync - Here for a Nextcloud Dedicated Server.
+#   Un script pour effectuer des sauvegardes incrémentielles complètes d'un serveur à l'aide de rsync - Ici pour un serveur dédié Nextcloud.
 #
 # Préambule Légal:
 # 	Ce script est un logiciel libre.
