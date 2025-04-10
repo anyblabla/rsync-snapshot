@@ -27,10 +27,10 @@ Les deux lignes principales à modifier sont...
 L'exemple de ce script "rsync-snapshot" est utilisé pour sauvegarder un serveur complet dédié à Nextcloud.
 
 # Installation
-chmod +x rsync-snapshot.sh
+- chmod +x rsync-snapshot.sh
 
-sudo ./rsync-snapshot.sh
+- sudo ./rsync-snapshot.sh
 
 # Demonstration/Démonstration
 
-https://youtu.be/xMMLwsEq8lI
+- https://youtu.be/xMMLwsEq8lI
