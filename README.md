@@ -1,10 +1,10 @@
 # 💾 `rsync-snapshot`
 
-## Sauvegardes Incrémentielles Complètes de Serveur avec Rsync
+## Sauvegardes incrémentielles complètes de serveur avec Rsync
 
 -----
 
-### 🇫🇷 Description du Projet
+### 🇫🇷 **Description du projet**
 
 Ce script est conçu pour effectuer des **sauvegardes incrémentielles complètes (snapshots)** d'un serveur Linux en utilisant l'outil `rsync`.
 
@@ -12,7 +12,7 @@ L'approche snapshot, basée sur la fonctionnalité de lien en dur (`--link-dest`
 
 L'exemple fourni est spécifiquement préconfiguré pour la sauvegarde d'un **serveur dédié Nextcloud**, mais il est facilement adaptable à tout autre environnement Linux.
 
-### 🇬🇧 Project Description
+### 🇬🇧 **Project Description**
 
 This script is designed to perform **full incremental backups (snapshots)** of a Linux server using the powerful `rsync` tool.
 
@@ -22,7 +22,7 @@ The provided example is specifically pre-configured for backing up a **dedicated
 
 -----
 
-### ⚙️ Personnalisation et Adaptation
+### ⚙️ **Personnalisation et adaptation**
 
 Ce script doit être adapté aux spécificités de votre serveur. Les deux lignes principales à modifier dans le fichier `rsync-snapshot.sh` sont :
 
@@ -43,7 +43,7 @@ Ce script doit être adapté aux spécificités de votre serveur. Les deux ligne
 
 -----
 
-### 🛠️ Installation et Utilisation
+### 🛠️ **Installation et utilisation**
 
 Pour utiliser le script, copiez-le sur votre serveur et suivez les étapes :
 
@@ -63,7 +63,7 @@ Pour utiliser le script, copiez-le sur votre serveur et suivez les étapes :
 
 -----
 
-### 📺 Démonstration
+### 📺 **Démonstration**
 
 Pour visualiser l'utilisation du script et comprendre en détail le mécanisme de sauvegarde snapshot avec `rsync` :
 
@@ -73,7 +73,6 @@ Pour visualiser l'utilisation du script et comprendre en détail le mécanisme d
 
 -----
 
-### 📝 Licence
+### 📝 **Licence**
 
-Ce projet est sous licence **[À compléter - Ex: MIT, GPL, etc.]**.
-http://googleusercontent.com/youtube_content/6
+Ce projet est sous licence GNU GPL (v2.0).
