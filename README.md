@@ -1,36 +1,79 @@
-# Description
-A script to perform full incremental backups of a server using rsync - Here for a Nextcloud Dedicated Server
+# 💾 `rsync-snapshot`
 
-Un script pour effectuer des sauvegardes incrémentielles complètes d'un serveur à l'aide de rsync - Ici pour un serveur dédié Nextcloud
+## Sauvegardes Incrémentielles Complètes de Serveur avec Rsync
 
-# Explications modifications/Explanations changes
-This script is to be adapted according to your needs.
+-----
 
+### 🇫🇷 Description du Projet
 
-The two main lines to change are...
+Ce script est conçu pour effectuer des **sauvegardes incrémentielles complètes (snapshots)** d'un serveur Linux en utilisant l'outil `rsync`.
 
-* readonly BACKUP_DIR=
+L'approche snapshot, basée sur la fonctionnalité de lien en dur (`--link-dest`) de `rsync`, permet d'avoir une **copie complète** du serveur à chaque exécution, tout en ne consommant de l'espace disque que pour les fichiers qui ont réellement été modifiés depuis la sauvegarde précédente.
 
-* --exclude=
+L'exemple fourni est spécifiquement préconfiguré pour la sauvegarde d'un **serveur dédié Nextcloud**, mais il est facilement adaptable à tout autre environnement Linux.
 
-The example of this "rsync-snapshot" script is used to backup a complete server dedicated to Nextcloud.
+### 🇬🇧 Project Description
 
-----------------------------------------------------------------------
-Ce script est à adapter selon vos besoins.
+This script is designed to perform **full incremental backups (snapshots)** of a Linux server using the powerful `rsync` tool.
 
-Les deux lignes principales à modifier sont...
+The snapshot approach, based on `rsync`'s hard-link feature (`--link-dest`), allows you to have a **complete copy** of the server with each execution, while only consuming disk space for the files that have actually been modified since the previous backup.
 
-* readonly BACKUP_DIR=
+The provided example is specifically pre-configured for backing up a **dedicated Nextcloud server**, but it is easily adaptable to any other Linux environment.
 
-* --exclude=
+-----
 
-L'exemple de ce script "rsync-snapshot" est utilisé pour sauvegarder un serveur complet dédié à Nextcloud.
+### ⚙️ Personnalisation et Adaptation
 
-# Installation
-- chmod +x rsync-snapshot.sh
+Ce script doit être adapté aux spécificités de votre serveur. Les deux lignes principales à modifier dans le fichier `rsync-snapshot.sh` sont :
 
-- sudo ./rsync-snapshot.sh
+1.  **Le répertoire de destination des sauvegardes (`BACKUP_DIR`)**
+    Définissez l'emplacement où toutes les sauvegardes seront stockées (idéalement sur un disque externe ou un partage réseau monté) :
 
-# Demonstration/Démonstration
+    ```bash
+    readonly BACKUP_DIR=/chemin/vers/votre/disque/sauvegardes/
+    ```
 
-- https://youtu.be/xMMLwsEq8lI
+2.  **Les répertoires à exclure (`--exclude=`)**
+    C'est la partie la plus critique. Pour un serveur Nextcloud, vous devez exclure les répertoires contenant des données temporaires ou des montages externes, comme le répertoire `/proc`, `/sys`, ou le cache.
+
+    ```bash
+    # Exemple pour Nextcloud :
+    --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* ...
+    ```
+
+-----
+
+### 🛠️ Installation et Utilisation
+
+Pour utiliser le script, copiez-le sur votre serveur et suivez les étapes :
+
+1.  **Rendre le script exécutable :**
+
+    ```bash
+    chmod +x rsync-snapshot.sh
+    ```
+
+2.  **Lancer la sauvegarde :**
+
+    ```bash
+    sudo ./rsync-snapshot.sh
+    ```
+
+**Note :** Il est fortement recommandé d'utiliser ce script via une tâche planifiée **`cron`** pour automatiser vos sauvegardes quotidiennes ou hebdomadaires.
+
+-----
+
+### 📺 Démonstration
+
+Pour visualiser l'utilisation du script et comprendre en détail le mécanisme de sauvegarde snapshot avec `rsync` :
+
+| Vidéo | Chaîne | Lien |
+| :--- | :--- | :--- |
+| **Rsync SNAPSHOT - Sauvegarder un serveur Linux complètement** | Blabla Linux | [Regarder la Démonstration](http://www.youtube.com/watch?v=xMMLwsEq8lI) |
+
+-----
+
+### 📝 Licence
+
+Ce projet est sous licence **[À compléter - Ex: MIT, GPL, etc.]**.
+http://googleusercontent.com/youtube_content/6
