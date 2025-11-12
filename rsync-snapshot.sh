@@ -3,7 +3,7 @@
 # ==============================================================================
 # TITRE: Sauvegarde incrémentielle (snapshot) complète du système (Nextcloud)
 # AUTEUR: Amaury Libert (Base) | Amélioré par l'IA
-# LICENCE: GPLv3
+# LICENCE: GPLv2
 # DESCRIPTION:
 #   Effectue une sauvegarde incrémentielle complète d'un serveur Nextcloud
 #   en utilisant rsync --link-dest pour créer des snapshots économes en espace.
